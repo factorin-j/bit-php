@@ -1,5 +1,9 @@
 <?php
 
+// Require all route files
+require_once(__ROOT__ . '/app/routes/index.php');
+
+// Add autoload register
 spl_autoload_register(function ($class) {
     $path = sprintf('%s/app/models/%s.php', __ROOT__, $class);
     if (!file_exists($path)) {
